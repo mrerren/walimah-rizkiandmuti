@@ -652,9 +652,21 @@ figure {
 }
 
 .timeline>li>.timeline-badge {
+  -webkit-animation-name: bubblinger-vert-down;
+  -moz-animation-name: bubblinger-vert-down;
+  -webkit-animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
+  -moz-animation-duration: 15s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: cubic-bezier(1, 0, 0, 1);
+  animation-name: bubblinger-vert-down;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0, 1);
   background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
+  background-position: unset;
+  background-repeat: unset;
   position: relative;
   color: #fff;
   width: 160px;
@@ -2277,5 +2289,192 @@ form label {
   box-shadow: 0px 10px 10px rgba(31, 73, 125, 0.8);
   border-radius: 5px;
 }
+
+/* image buble */
+@-webkit-keyframes bubblinger-vert-down {
+  0% {
+    background-position: 0 0;
+  }
+
+  5% {
+    background-position: 0 160px;
+  }
+
+  35% {
+    background-position: 0 160px;
+  }
+
+  40% {
+    background-position: 0 320px;
+  }
+
+  68% {
+    background-position: 0 320px;
+  }
+
+  73% {
+    background-position: 0 480px;
+  }
+
+  100% {
+    background-position: 0 480px;
+  }
+}
+
+@-moz-keyframes bubblinger-vert-down {
+  0% {
+    background-position: 0 0;
+  }
+
+  5% {
+    background-position: 0 160px;
+  }
+
+  35% {
+    background-position: 0 160px;
+  }
+
+  40% {
+    background-position: 0 320px;
+  }
+
+  68% {
+    background-position: 0 320px;
+  }
+
+  73% {
+    background-position: 0 480px;
+  }
+
+  100% {
+    background-position: 0 480px;
+  }
+}
+
+@keyframes bubblinger-vert-down {
+  0% {
+    background-position: 0 0;
+  }
+
+  5% {
+    background-position: 0 160px;
+  }
+
+  35% {
+    background-position: 0 160px;
+  }
+
+  40% {
+    background-position: 0 320px;
+  }
+
+  68% {
+    background-position: 0 320px;
+  }
+
+  73% {
+    background-position: 0 480px;
+  }
+
+  100% {
+    background-position: 0 480px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  @-webkit-keyframes bubblinger-vert-down {
+    0% {
+      background-position: 0 0;
+    }
+
+    5% {
+      background-position: 0 60px;
+    }
+
+    35% {
+      background-position: 0 60px;
+    }
+
+    40% {
+      background-position: 0 120px;
+    }
+
+    68% {
+      background-position: 0 120px;
+    }
+
+    73% {
+      background-position: 0 180px;
+    }
+
+    100% {
+      background-position: 0 180px;
+    }
+  }
+
+  @-moz-keyframes bubblinger-vert-down {
+    0% {
+      background-position: 0 0;
+    }
+
+    5% {
+      background-position: 0 60px;
+    }
+
+    35% {
+      background-position: 0 60px;
+    }
+
+    40% {
+      background-position: 0 120px;
+    }
+
+    68% {
+      background-position: 0 120px;
+    }
+
+    73% {
+      background-position: 0 180px;
+    }
+
+    100% {
+      background-position: 0 180px;
+    }
+  }
+
+  @keyframes bubblinger-vert-down {
+    0% {
+      background-position: 0 0;
+    }
+
+    5% {
+      background-position: 0 60px;
+    }
+
+    35% {
+      background-position: 0 60px;
+    }
+
+    40% {
+      background-position: 0 120px;
+    }
+
+    68% {
+      background-position: 0 120px;
+    }
+
+    73% {
+      background-position: 0 180px;
+    }
+
+    100% {
+      background-position: 0 180px;
+    }
+  }
+
+
+}
+
+
 
 /*# sourceMappingURL=style.css.map */
