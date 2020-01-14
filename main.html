@@ -505,24 +505,38 @@
 				</div>
 				<div class="row animate-box">
 					<div class="col-md-10 col-md-offset-1">
-						<form class="form-inline">
-							<div class="col-md-4 col-sm-4">
-								<div class="form-group">
-									<label for="name" class="sr-only">Name</label>
-									<input type="name" name="name" class="form-control" id="name"
-										placeholder="Your Name" required>
+						<form id="rsvp-form" class="form-inline" name="submit-to-google-sheet">
+							<div class="rsvp-box-hide">
+								<div class=" col-md-6 col-sm-4">
+									<div class="form-group">
+										<label for="name" class="sr-only">Name</label>
+										<input type="name" name="name" class="form-control" id="name"
+											placeholder="Your Name" required>
+										<span class="rsvp-name-error"></span>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-4">
+									<div class="form-group">
+										<label for="email" class="sr-only">Email</label>
+										<input type="email" name="email" class="form-control" id="email"
+											placeholder="Email Address" required>
+										<span class="rsvp-email-error"></span>
+									</div>
+								</div>
+								<div class="col-md-12 col-sm-4">
+									<div class="form-group">
+										<label for="greeting" class="sr-only">Greeting</label>
+										<input type="textarea" name="greeting" id="greeting" class="form-control"
+											placeholder="Greeting for the bride and groom" required>
+										<span class="greeting-error"></span>
+									</div>
+								</div>
+								<div class="col-md-12 col-sm-12">
+									<button type="submit" class="btn btn-default btn-block" name="rsvp-submit"
+										id="rsvp-submit">I am Attending</button>
 								</div>
 							</div>
-							<div class="col-md-4 col-sm-4">
-								<div class="form-group">
-									<label for="email" class="sr-only">Email</label>
-									<input type="email" name="email" class="form-control" id="email"
-										placeholder="Email Address" required>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-4">
-								<button type="submit" class="btn btn-default btn-block">I am Attending</button>
-							</div>
+							<div class="rsvp-message" style="text-align: center;"></div>
 						</form>
 					</div>
 				</div>
@@ -550,7 +564,8 @@
 					<div class="row animate-box">
 						<div class="col-md-8 col-md-offset-2 text-center">
 							<a href="https://goo.gl/maps/3V49o9mjzWq3q89x9" class="btn btn-maps btn-sm"
-								target="_blank">OPEN IN GOOGLE
+								target="_blank">OPEN
+								IN GOOGLE
 								MAPS</a>
 						</div>
 					</div>
@@ -732,6 +747,23 @@
 			};
 		})();
 	</script>
+	<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+	<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+	<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+	<!-- <script>
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbzRFsvpbGDQ3tlI6UaWmOP4TRLJvwhRSo7hTSwa_GNrsiUMWmk/exec'
+		const form = document.forms['submit-to-google-sheet']
+
+		form.addEventListener('submit', e => {
+			e.preventDefault()
+			fetch(scriptURL, {
+					method: 'POST',
+					body: new FormData(form)
+				})
+				.then(response => console.log('Success!', response))
+				.catch(error => console.error('Error!', error.message))
+		})
+	</script> -->
 
 </body>
 
